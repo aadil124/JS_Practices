@@ -7,6 +7,7 @@ var c;
 const num = prompt("Please enter a limit for series");
 //  document.getElementById("fbseries").innerHTML = a;
 console.log("series: ");
+
 for (let i = 1; i <= num; i++) {
   console.log(a);
   document.getElementById("fbseries").innerHTML = a;
@@ -14,6 +15,7 @@ for (let i = 1; i <= num; i++) {
   a = b;
   b = c;
 }
+
 
 // const number = parseInt(prompt("Enter the number of terms: "));
 // let n1 = 0,
@@ -28,3 +30,4 @@ for (let i = 1; i <= num; i++) {
 //   n1 = n2;
 //   n2 = nextTerm;
 // }
+
