@@ -37,4 +37,35 @@ const classes = (value) => {
 };
 classes("progressive");
 
+const calAreaOfCircle = (rad) => {
+  console.log(`Area of Circle is ${3.14 * rad ** 2}`);
+};
+calAreaOfCircle(5);
+
+// Return functions value
+const areaOfSquare = (l, b) => {
+  return l * b;
+};
+let result = areaOfSquare(4, 5);
+console.log(`Area of Square is ${result}`);
+
+const greets = () => {
+  return "Welcome to JS Classroom";
+};
+let message = greets();
+console.log(`${message}`);
+
+// tax invoice
+
+const taxInvoice = (products, tax) => {
+  let total = 0;
+  for (let counter = 0; counter < products.length; counter++) {
+    total = total + products[counter] + products[counter] * tax;
+  }
+  return total;
+};
+
+let taxAmount = taxInvoice([10, 30, 45, 60], 0.35);
+console.log(`The Total Tax Amount is ${taxAmount}`);
+
 // Fate arrow functions End**********************
