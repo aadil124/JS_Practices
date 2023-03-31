@@ -55,8 +55,10 @@ const grid = document.querySelector("#grid");
 const results = document.querySelector("#results");
 // console.log(grid);
 
+const displayResults = document.querySelector("#results");
 let cardsChosen = [];
 let cardsChosenId = [];
+let cardsWon = [];
 
 function createBoard() {
   for (let counter = 0; counter < cardArray.length; counter++) {
@@ -79,19 +81,38 @@ function flipCard() {
   //   console.log("cardsChosenId", cardsChosenId)
   // console.log(this)
   this.setAttribute("src", cardArray[cardId].img);
+
+  if (cardsChosen.length === 2) {
+    setTimeout(checkTheMatch, 500);
+  }
 }
 
 function checkTheMatch() {
-  const cards = document.querySelector("img");
+  const cards = document.querySelectorAll("img");
   const optionOneId = cardsChosenId[0];
   const optionTwoId = cardsChosenId[1];
 
-  if (optionOneId == optionTwoId) {
-    alert("You have found the match");
+  if (cardsChosen[0] === cardsChosen[1]) {
+    // alert("You have found the right food match");
     cards[optionOneId].setAttribute("src", "images/white.png");
     cards[optionTwoId].setAttribute("src", "images/white.png");
-     cards[optionOneId].removeEventListener("click", flipCard);
-     cards[optionTwoId].removeEventListener("click", flipCard);
+    //remove click ability on cards
+    cards[optionOneId].removeEventListener("click", flipCard);
+    cards[optionTwoId].removeEventListener("click", flipCard);
+
+    cardsWon.push(cardsChosen);
+  } else {
+    cards[optionOneId].setAttribute("src", "images/blank.png");
+    cards[optionTwoId].setAttribute("src", "images/blank.png");
+    // alert("Please try again !!!");
+  }
+
+  cardsChosen = [];
+  cardsChosenId = [];
+  displayResults.textContent = cardsWon.length;
+
+  if (cardsWon.length === cardArray.length / 2) {
+    displayResults.textContent = "Congratulations! You Won";
   }
 }
 createBoard();
