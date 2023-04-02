@@ -4,6 +4,7 @@ const blockHeight = 20;
 
 //create the blocks
 
+// class - its a template or blueprint
 class Block {
   constructor(xAxis, yAxis) {
     this.bottomLeft = (xAxis, yAxis);
@@ -18,6 +19,10 @@ const blocks = [
   new Block(20, 300),
   new Block(25, 350),
 ];
+// new - create a new empty object
+// what its takes - take the object and sets the value of this to be new empty object
+// then its calls the constructor method inside the class
+
 // Add blocks
 function addBlocks() {
   for (let i = 0; i < blocks.length; i++) {
