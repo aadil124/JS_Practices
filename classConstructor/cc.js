@@ -1,0 +1,4 @@
+class foodItems {
+ constructor(foodItems) {}
+ 
+}
