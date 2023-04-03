@@ -6,21 +6,22 @@ class FoodItems {
 
   purchased() {
     console.log("You have successfully purchased", this.foodName);
+    console.log(this);
+    return this;
   }
   sell() {
     console.log("You have successfully sold", this.foodName);
+    console.log(this);
+    return this;
   }
 }
 
 var food1 = new FoodItems("Banana", "yellow");
-// food1.purchased(); //calling purchase method 
-// food1.sell(); //calling sell method 
-
+// food1.purchased(); //calling purchase method
+// food1.sell(); //calling sell method
 
 //Method chaining
-food1.purchased().sell();    //cc.js:21 Uncaught TypeError: Cannot read properties of undefined (reading 'sell')
-
-
+food1.purchased().sell(); //cc.js:21 Uncaught TypeError: Cannot read properties of undefined (reading 'sell')  // for this error message we have to use return this;
 
 console.log(food1);
 var food2 = new FoodItems("Orange", "orange");
