@@ -3,9 +3,25 @@ class FoodItems {
     this.foodName = foodname;
     this.foodColor = foodcolor;
   }
+
+  purchased() {
+    console.log("You have successfully purchased", this.foodName);
+  }
+  sell() {
+    console.log("You have successfully sold", this.foodName);
+  }
 }
 
 var food1 = new FoodItems("Banana", "yellow");
+// food1.purchased(); //calling purchase method 
+// food1.sell(); //calling sell method 
+
+
+//Method chaining
+food1.purchased().sell();    //cc.js:21 Uncaught TypeError: Cannot read properties of undefined (reading 'sell')
+
+
+
 console.log(food1);
 var food2 = new FoodItems("Orange", "orange");
 console.log(food2);
