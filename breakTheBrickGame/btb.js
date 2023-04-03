@@ -5,6 +5,7 @@ const blockHeight = 20;
 //create the blocks
 
 // class - its a template or blueprint
+// class inheritance - its a  like genetics  
 class Block {
   constructor(xAxis, yAxis) {
     this.bottomLeft = (xAxis, yAxis);
