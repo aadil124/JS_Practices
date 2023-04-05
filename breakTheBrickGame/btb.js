@@ -2,12 +2,29 @@ const grid = document.querySelector(".grid");
 const blockWidth = 100;
 const blockHeight = 20;
 const gridWidth = 560;
+const gridHeight = 300;
+let timerId;
+let ballDiameter = 20;
+let xDirection = -2;
+let yDirection = 2;
 
 const startUser = [230, 10];
 let currentPosition = startUser;
 
 const startBall = [270, 40];
 let ballCurrentPosition = startBall;
+
+const userScore = document.querySelector(".score");
+const userResult = document.querySelector("#result");
+
+//UserName
+
+// document
+//   .getElementsByClassName("user-name")
+//   .addEventListener("DOMContentLoaded", userNameEventHandler);
+// function userNameEventHandler(event) {
+//   prompt("Enter your name: ");
+// }
 
 //create the blocks
 
@@ -86,12 +103,14 @@ function moveUser(u) {
       if (currentPosition[0] > 0) {
         currentPosition[0] -= 10;
         //cp =cp -10 = 230-10 = 220
+        console.log(currentPosition[0]);
         drawUser();
       }
       break;
     case "ArrowRight":
       if (currentPosition[0] < gridWidth - blockWidth) {
         currentPosition[0] += 10;
+        console.log(currentPosition[0]);
         drawUser();
       }
       break;
@@ -101,15 +120,6 @@ function moveUser(u) {
   }
 }
 
-// move ball
-
-function moveBall() {
-  ballCurrentPosition[0] += 2;
-  ballCurrentPosition[1] += 2;
-  drawBall();
-}
-setInterval(moveBall,30);
-
 //draw ball
 const ball = document.createElement("div");
 ball.classList.add("ball");
@@ -117,3 +127,54 @@ drawBall();
 grid.appendChild(ball);
 
 // document.addEventListener("keydown", moveUser);
+
+// move ball
+
+function moveBall() {
+  ballCurrentPosition[0] += xDirection;
+  ballCurrentPosition[1] += yDirection;
+  drawBall();
+  checkCollision();
+}
+timerId = setInterval(moveBall, 30);
+
+// collision checker
+function checkCollision() {
+
+  
+  // wall collision
+  if (
+    ballCurrentPosition[0] >= gridWidth - ballDiameter ||
+    ballCurrentPosition[0] <= 0 ||
+    ballCurrentPosition[1] >= gridHeight - ballDiameter
+  ) {
+    changeDirection();
+  }
+
+  if (ballCurrentPosition[1] <= 0) {
+    clearInterval(timerId);
+    userResult.innerHTML = "Better Luck Next Time";
+    document.removeEventListener("keydown", moveBall);
+  }
+}
+
+function changeDirection() {
+  //top
+  if (xDirection === 2 && yDirection === 2) {
+    yDirection = -2;
+    return;
+  }
+  //right
+  if (xDirection === 2 && yDirection === -2) {
+    xDirection = -2;
+    return;
+  }
+  if (xDirection === -2 && yDirection === -2) {
+    yDirection = 2;
+    return;
+  }
+  if (xDirection === -2 && yDirection === 2) {
+    xDirection = 2;
+    return;
+  }
+}
