@@ -7,7 +7,7 @@ let timerId;
 let ballDiameter = 20;
 let xDirection = -2;
 let yDirection = 2;
-
+let finalScore = 0;
 const startUser = [230, 10];
 let currentPosition = startUser;
 
@@ -19,12 +19,11 @@ const userResult = document.querySelector("#result");
 
 //UserName
 
-// document
-//   .getElementsByClassName("user-name")
-//   .addEventListener("DOMContentLoaded", userNameEventHandler);
-// function userNameEventHandler(event) {
-//   prompt("Enter your name: ");
-// }
+function userNameEventHandler(event) {
+  const userName = document.querySelector(".user-name");
+  let username = prompt("Enter your name: ");
+  userName.innerHTML = username;
+}
 
 //create the blocks
 
@@ -126,10 +125,9 @@ ball.classList.add("ball");
 drawBall();
 grid.appendChild(ball);
 
-// document.addEventListener("keydown", moveUser);
+document.addEventListener("keydown", moveUser);
 
 // move ball
-
 function moveBall() {
   ballCurrentPosition[0] += xDirection;
   ballCurrentPosition[1] += yDirection;
@@ -140,8 +138,22 @@ timerId = setInterval(moveBall, 30);
 
 // collision checker
 function checkCollision() {
-
-  
+  for (let counter = 0; counter < blocks.length; counter++) {
+    if (
+      ballCurrentPosition[0] > blocks[counter].bottomLeft[0] &&
+      ballCurrentPosition[0] < blocks[counter].bottomRight[0] &&
+      ballCurrentPosition[1] + ballDiameter > blocks[counter].bottomLeft[1] &&
+      ballCurrentPosition[1] < blocks[counter].topLeft[1]
+    ) {
+      const allBlocks = Array.from(document.querySelectorAll(".block"));
+      console.log(allBlocks);
+      allBlocks[counter].classList.remove("block");
+      blocks.splice(counter, 1);
+      changeDirection();
+      finalScore++;
+      userScore.innerHTML = finalScore;
+    }
+  }
   // wall collision
   if (
     ballCurrentPosition[0] >= gridWidth - ballDiameter ||
@@ -151,6 +163,18 @@ function checkCollision() {
     changeDirection();
   }
 
+  //user paddle collision
+
+  if (
+    ballCurrentPosition[0] > currentPosition[0] &&
+    ballCurrentPosition[0] < currentPosition[0] + blockWidth &&
+    ballCurrentPosition[1] > currentPosition[1] &&
+    ballCurrentPosition[1] < currentPosition[1] + blockHeight
+  ) {
+    changeDirection();
+  }
+
+  //bottom grid collision
   if (ballCurrentPosition[1] <= 0) {
     clearInterval(timerId);
     userResult.innerHTML = "Better Luck Next Time";
