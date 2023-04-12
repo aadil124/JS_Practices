@@ -39,3 +39,4 @@ const getTodos = () => {
 
 getTodos();
 getTodos();
+getTodos();
