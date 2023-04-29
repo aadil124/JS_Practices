@@ -37,11 +37,40 @@
 //   console.log(i);
 // }
 
-for (let i = 1; i <= 10; i++) {
-  if (i != 5) {
-    continue;
-  }
-  console.log(i);
-}
+// for (let i = 1; i <= 10; i++) {
+//   if (i != 5) {
+//     continue;
+//   }
+//   console.log(i);
+// }
+
+/*************************************************************************************** */
+
+/**************************for in loop and for of loop*********************************** */
+const names = ["aadil", "saif", "monis", "israr", "sameer", "razi"];
+
+//traditional for loop
+// for (let i = 0; i < names.length; i++) {
+//   console.log(names[i]);
+// }
+
+// for each loop
+
+// names.forEach((name) => {
+//   console.log(name);
+// });
+
+// for in loop : it is iterable enumeration. which iterate over index value -> ES6
+
+// for (let key in names) {
+//   console.log(key); // gives index number
+//   console.log(names[key]);// print element name
+// }
+
+// for of : iterate over data and get the data object
+
+// for (let data of names) {
+//   console.log(data); // directly gives element name
+// }
 
 /*************************************************************************************** */
