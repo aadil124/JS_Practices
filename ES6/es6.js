@@ -61,4 +61,25 @@
 // }
 // console.log(num); //10
 
-// 3)
+// 3)looping with var
+
+// for (var i = 0; i <= 5; i++) {
+//   console.log(i); // 0 1 2 3 4 5
+// }
+// console.log(i); // 6
+
+// 4) loop with let
+// for (let i = 0; i <= 5; i++) {
+//   console.log(i); // 0 1 2 3 4 5
+// }
+// console.log(i); // caught ReferenceError: i is not defined
+
+// 5)
+let course = "MERN";
+if (course === "MERN") {
+  var stream1 = "Front End Developer";
+  let stream2 = "Back End Developer";
+}
+console.log(course); //MERN
+console.log(stream1); // Front End Developer
+console.log(stream2); //caught ReferenceError: stream2 is not defined
