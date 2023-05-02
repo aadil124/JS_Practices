@@ -75,11 +75,64 @@
 // console.log(i); // caught ReferenceError: i is not defined
 
 // 5)
-let course = "MERN";
-if (course === "MERN") {
-  var stream1 = "Front End Developer";
-  let stream2 = "Back End Developer";
-}
-console.log(course); //MERN
-console.log(stream1); // Front End Developer
-console.log(stream2); //caught ReferenceError: stream2 is not defined
+// let course = "MERN";
+// if (course === "MERN") {
+//   var stream1 = "Front End Developer";
+//   let stream2 = "Back End Developer"; // this is not accessible to outside loop
+// }
+// console.log(course); //MERN
+// console.log(stream1); // Front End Developer
+// console.log(stream2); //caught ReferenceError: stream2 is not defined
+
+//6
+// let course = "MERN";
+// if (course != "MERN") {
+//   var stream1 = "Front End Developer";
+//   let stream2 = "Back End Developer";
+// }
+// console.log(course); //MERN
+// console.log(stream1); // undefined
+// console.log(stream2); //caught ReferenceError: stream2 is not defined
+
+//7
+// let getData = () => {
+//   var name1 = "pradeep"; //var has fuctional scope
+//   let name2 = "sameer";
+// };
+// getData();
+// console.log(name1); // error message
+// console.log(name2); // error message
+
+/************************************************************************ */
+
+// const - it is read only variable => once you assign const to any variable, u can not modify it
+// const also a block scope
+// examples
+// 1)
+// const num = 10;
+// num = 11;
+// console.log(num); //caught TypeError: Assignment to constant variable.
+
+// 2)
+// function myfun() {
+//   var num1 = 1;
+//   let num2 = 2;
+//   const num3 = 3;
+//   {
+//     var num1 = 100;
+//     let num2 = 200;
+//     const num3 = 300;
+//     console.log("inside block" + num1); //100
+//     console.log("inside block" + num2); //200
+//     console.log("inside block" + num3); //300
+//   }
+//   console.log("outside block" + num1); //100
+//   console.log("outside block" + num2); //2
+//   console.log("outside block" + num3); //3
+// }
+// myfun();
+// console.log("outside Fun block" + num1); // error message
+// console.log("outside Fun block" + num2);// error message
+// console.log("outside Fun block" + num3);// error message
+
+
