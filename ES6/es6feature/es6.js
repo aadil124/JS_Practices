@@ -135,4 +135,31 @@
 // console.log("outside Fun block" + num2);// error message
 // console.log("outside Fun block" + num3);// error message
 
+// 3)
+// if (50 === 50) {
+//   var num1 = 10;
+//   let num2 = 20;
+//   const num3 = 30;
+// }
+// console.log(num1); //10
+// console.log(num2); //error
+// console.log(num3); //error
 
+// 4)
+// if (50 === 50) {
+//   let num2 = 20;
+//   const num3 = 30;
+// }
+// console.log(num2); //error
+// console.log(num3); //error
+
+//5 )
+let getData = () => {
+  var num1 = 10;
+  let num2 = 20;
+  const num3 = 30;
+};
+getData();
+console.log(num1); //error functional scope
+console.log(num2); //error block scope
+console.log(num3); //error block scope
