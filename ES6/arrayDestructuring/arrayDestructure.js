@@ -185,4 +185,4 @@ Degree: ${degree}
 position: ${position}
 Salary: ${salary}
 `);
-/*************************** End Practice Questionsr****************************************/
+/*************************** End Practice Questions****************************************/
