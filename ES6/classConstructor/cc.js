@@ -50,7 +50,8 @@ class vehicle {
 
   // create a method to get data
   getSpecification() {
-    let data = `Brand: ${this.brand}
+    let data = `
+    Brand: ${this.brand}
     Model : ${this.model}
     Color : ${this.color}
     Price : ${this.price}
@@ -61,9 +62,38 @@ class vehicle {
 }
 //lets create an object
 let obj = new vehicle("maruti", "alt-100", "black", 400000);
+let objtata = new vehicle("Tata", "Tata-Nexon", "White", 1200000);
 
 // call method to access the data and print
 
 console.log(obj.getSpecification());
+console.log(objtata.getSpecification());
 
 /************************************End classes and objects *********************************/
+
+//Inheritance: code reusability ********************************
+//parent class
+class Man {
+  constructor(name) {
+    console.log("parent constructor");
+    this.name = name;
+  }
+}
+
+//child class
+class employee extends Man {
+  constructor(name, position) {
+    console.log("child constructor");
+    super(name);
+    this.position = position;
+  }
+}
+
+// class peon extends Man {}
+
+let parentobj = new Man("srinivas");
+let employeeobj = new employee("sameer", "developer");
+
+console.log(employeeobj.name);
+console.log(parentobj.name);
+console.log(employeeobj.position);
