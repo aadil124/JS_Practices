@@ -127,6 +127,7 @@ class Person {
   // static methods -> Class Name
   static getCompanyName() {
     console.log(Person.companyName);
+    // return Person.companyName;
   }
 }
 
@@ -134,3 +135,47 @@ let person1 = new Person("Aadil", 28, "Web Developer", 25000);
 
 person1.getData();
 // console.log(person1.getData());
+
+// person1.getCompanyName();
+// console.log(person1.getCompanyName()); //caught TypeError: person1.getCompanyName is not a function
+// static funtion ko direct call nahi ker sakte hai.....us ko call kerne ke liye class ka use kerna hoga...
+Person.getCompanyName();
+// console.log(Person.getCompanyName()); // aur agar return kare ge to yaha print hoga
+
+class employee extends Person {
+  static companyName = "Google";
+  constructor(name, age, designation, salary, location, country) {
+    super(name, age, designation, salary);
+    this.location = location;
+    this.country = country;
+  }
+  // instance methods
+  getData() {
+    let employeeData = ` Name: ${this.name}
+      Age: ${this.age}
+      Designation: ${this.designation}
+      Salary: ${this.salary}
+      Location: ${this.location}
+      Country: ${this.country}
+    `;
+    console.log(employeeData);
+  }
+
+  // static method
+  static getCompanyName() {
+    console.log(employee.companyName);
+  }
+}
+
+let employee1 = new employee(
+  "sameer",
+  25,
+  "Data Analyst",
+  50000,
+  "Mumbai",
+  "India"
+);
+employee1.getData();
+// employee1.getCompanyName(); //caught TypeError: employee1.getCompanyName is not a function
+
+employee.getCompanyName();
