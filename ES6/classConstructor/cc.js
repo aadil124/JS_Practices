@@ -184,25 +184,34 @@
 //************************************ Start example 2 **************************************/
 // calculate area , perimeters of rectangle using oops concept
 
-class Rectangle {
-  constructor(length, breadth) {
-    this.length = length;
-    this.breadth = breadth;
-  }
+// class Rectangle {
+//   constructor(length, breadth) {
+//     this.length = length;
+//     this.breadth = breadth;
+//   }
 
-  //logic to find area
-  getArea() {
-    return this.breadth * this.length;
-  }
-}
+//   //logic to find area
+//   getArea() {
+//     return this.breadth * this.length;
+//   }
+// }
 
-let rectArea = new Rectangle(10, 20);
-console.log(` Area of Rectangle is ${rectArea.getArea()}`);
+// let rectArea = new Rectangle(10, 20);
+// // rectArea.getArea();
+// console.log(` Area of Rectangle is ${rectArea.getArea()}`);
 
-class Perimeters extends Rectangle {
+// class Perimeters extends Rectangle {
+//   constructor(length, breadth) {
+//     super(length, breadth);
+//   }
 
-}
+//   getPerimeter() {
+//     return 2 * (this.length + this.breadth);
+//   }
+// }
 
-let 
+// let rectPerimeter = new Perimeters(30, 40);
+// // rectPerimeter.getPerimeter();
+// console.log(` Perimeter of Rectangle is ${rectPerimeter.getPerimeter()}`);
 
 //************************************ End example 2 **************************************/
