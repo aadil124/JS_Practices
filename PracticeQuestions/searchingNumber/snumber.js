@@ -18,16 +18,17 @@
 // 7,8,3,4,8
 // count of number 8
 
-function countOfNumber(arr) {
+function countOfNumber(arr, numToSearch) {
   var count = 0;
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === 8) {
+    if (arr[i] === numToSearch) {
       count++;
     }
   }
   return count;
 }
 
-let arr = [7, 8, 3, 4, 8,6,9,8,2];
-let result = countOfNumber(arr);
+let arr = [8, 7, 8, 3, 4, 8, 8, 8, 6, 9, 8, 2];
+let numToSearch = 8;
+let result = countOfNumber(arr, numToSearch);
 console.log(`count of 8 is ${result} times`);
