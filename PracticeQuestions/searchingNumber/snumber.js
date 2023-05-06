@@ -28,7 +28,7 @@ function countOfNumber(arr, numToSearch) {
   return count;
 }
 
-let arr = [8, 7, 8, 3, 4, 8, 8, 8, 6, 9, 8, 2];
+let arr = [8, 7, 6, 8, 3, 4, 8, 8, 8, 6, 9, 8, 2];
 let numToSearch = 8;
 let result = countOfNumber(arr, numToSearch);
-console.log(`count of 8 is ${result} times`);
+console.log(`count of ${numToSearch} is ${result} times`);
