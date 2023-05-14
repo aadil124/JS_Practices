@@ -104,14 +104,4 @@ let data = employees
   .map((data) => data.name)
   .sort();
 console.log(data);
-
-/****************************************** End Filter *************************************** */
-/************************************** Start Questions ************************************* */
-// Questions
-// 1) Print all the countries from the Asia continent or region using filter function.
-// 2) Get all the countries with population having less than 2 lakhs using filter function.
-// 3) Print the details name , capital , flag using foreach and map function.
-// 4) Print the total population of all countries using reduce function.
-// 5) Print the countries name uses USD as currency.
-
-/*************************************** End Questions *************************************** */
+/****************************************** End Filter ****************************************/
