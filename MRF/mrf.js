@@ -7,7 +7,7 @@
 let employees = [
   {
     id: 101,
-    name: "pardeep",
+    name: "Pardeep",
     designation: "Jr Developer",
     yearOfExp: 2,
     salary: 30000,
@@ -28,7 +28,7 @@ let employees = [
   },
   {
     id: 104,
-    name: "john",
+    name: "John",
     designation: "Administrator",
     yearOfExp: 7,
     salary: 50000,
@@ -88,3 +88,30 @@ let highestYearOfExperience = employees.reduce((prev, curr) => {
 console.log(highestYearOfExperience);
 
 /****************************************** End Reduce *************************************** */
+/*****************************************Start Filter *************************************** */
+// Filter Function: its works in a same way as its sound
+
+// Get the people data with year of experience greater than 4
+
+// let data = employees.filter((data) => {
+//   return data.yearOfExp > 4;
+// });
+// console.log(data);
+
+// chaining of data with MRF
+let data = employees
+  .filter((data) => data.yearOfExp > 4)
+  .map((data) => data.name)
+  .sort();
+console.log(data);
+
+/****************************************** End Filter *************************************** */
+/************************************** Start Questions ************************************* */
+// Questions
+// 1) Print all the countries from the Asia continent or region using filter function.
+// 2) Get all the countries with population having less than 2 lakhs using filter function.
+// 3) Print the details name , capital , flag using foreach and map function.
+// 4) Print the total population of all countries using reduce function.
+// 5) Print the countries name uses USD as currency.
+
+/*************************************** End Questions *************************************** */
