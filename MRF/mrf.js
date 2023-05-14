@@ -23,7 +23,7 @@ let employees = [
     id: 103,
     name: "Suman",
     designation: "Dot Net Developer",
-    yearOfExp: 2,
+    yearOfExp: 12,
     salary: 100000,
   },
   {
@@ -70,7 +70,21 @@ console.log(empDesignation);
 
 let totalSalary = employees.reduce((prev, curr) => {
   return prev + curr.salary;
-},0);
+}, 0);
 console.log(totalSalary);
+
+// Highest year of experience with reduce
+
+let highestYearOfExperience = employees.reduce((prev, curr) => {
+  // if (prev.yearOfExp > curr.yearOfExp) {
+  //   return prev;
+  // } else {
+  //   return curr;
+  // }
+
+  return prev.yearOfExp > curr.yearOfExp ? prev : curr; // using ternary operator
+}, 0);
+
+console.log(highestYearOfExperience);
 
 /****************************************** End Reduce *************************************** */
