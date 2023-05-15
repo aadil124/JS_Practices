@@ -42,9 +42,47 @@ xhr.onreadystatechange = function () {
     // });
 
     // 2) Get all the countries with population having less than 2 lakhs using filter function.
-    
-  }
+    // data.filter((data) => {
+    //   if (data.population < 200000) {
+    //     console.log(
+    //       `Names : ${data.name.common} having Population: ${data.population}`
+    //     );
+    //   }
+    // });
 
-  //   let asiaCountryNames =
+    // 3) Print the details name , capital , flag using foreach and map function.
+    //using foreach method
+    // data.forEach((element) => {
+    //   console.log(`
+    //   Country: ${element.name.common}
+    //   Capital: ${element.capital}
+    //   Flag: ${element.flags.png}
+    //   `);
+    // });
+
+    //using MAP method
+    data.map((data) => {
+      console.log(`
+      Country: ${data.name.common}
+      Capital: ${data.capital}
+      Flags: ${data.flags.png}
+      `);
+    });
+
+    // 4) Print the total population of all countries using reduce function.
+
+    // let totalPopulations = data.reduce((prev, curr) => {
+    //   return (prev += curr.population);
+    // }, 0);
+    // console.log(`Total population of all countries: ${totalPopulations}`);
+
+    // 5) Print the countries name uses USD as currency.
+    // data.filter((data) => {
+    //   // console.log(data.currencies.USD);
+    //   if (data.currencies.USD) {
+    //     console.log(`Name : ${data.name.common}`);
+    //   }
+    // });
+  }
 };
 xhr.send();
