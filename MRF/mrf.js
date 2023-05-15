@@ -54,13 +54,13 @@ let employees = [
 
 // using MAP
 
-let employeeNamesUsingMap = employees.map((emp) => {
-  return emp.name;
-});
-console.log(employeeNamesUsingMap);
+// let employeeNamesUsingMap = employees.map((emp) => {
+//   return emp.name;
+// });
+// console.log(employeeNamesUsingMap);
 
-let empDesignation = employees.map((emp) => emp.designation);
-console.log(empDesignation);
+// let empDesignation = employees.map((emp) => emp.designation);
+// console.log(empDesignation);
 
 /********************************************* End MAP *************************************** */
 /**************************************** Start Reduce *************************************** */
@@ -68,24 +68,24 @@ console.log(empDesignation);
 
 // get salary of the all employees
 
-let totalSalary = employees.reduce((prev, curr) => {
-  return prev + curr.salary;
-}, 0);
-console.log(totalSalary);
+// let totalSalary = employees.reduce((prev, curr) => {
+//   return prev + curr.salary;
+// }, 0);
+// console.log(totalSalary);
 
 // Highest year of experience with reduce
 
-let highestYearOfExperience = employees.reduce((prev, curr) => {
-  // if (prev.yearOfExp > curr.yearOfExp) {
-  //   return prev;
-  // } else {
-  //   return curr;
-  // }
+// let highestYearOfExperience = employees.reduce((prev, curr) => {
+//   // if (prev.yearOfExp > curr.yearOfExp) {
+//   //   return prev;
+//   // } else {
+//   //   return curr;
+//   // }
 
-  return prev.yearOfExp > curr.yearOfExp ? prev : curr; // using ternary operator
-}, 0);
+//   return prev.yearOfExp > curr.yearOfExp ? prev : curr; // using ternary operator
+// }, 0);
 
-console.log(highestYearOfExperience);
+// console.log(highestYearOfExperience);
 
 /****************************************** End Reduce *************************************** */
 /*****************************************Start Filter *************************************** */
