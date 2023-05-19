@@ -81,3 +81,28 @@ let employees = [
     ip_address: "160.182.378.15",
   },
 ];
+
+// to get all employee data on button click
+
+let allEmpButton = document.querySelector("#all-emp-data");
+allEmpButton.addEventListener("click", () => {
+  console.log("allEmpButton clicked");
+  displayData();
+});
+
+let displayData = () => {
+  let tBody = document.querySelector(".tbody");
+  let tableRow = "";
+  for (let emp of employees) {
+    // console.log(emp);
+    tableRow += `
+    <tr>${emp.id}</tr>
+    <tr>${emp.first_name}</tr>
+    <tr>${emp.last_name}</tr>
+    <tr>${emp.email}</tr>
+    <tr>${emp.gender}</tr>
+    <tr>${emp.ip_address}</tr>
+    `;
+  }
+  tBody.innerHTML = tableRow;
+};
