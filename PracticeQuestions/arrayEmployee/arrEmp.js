@@ -83,26 +83,54 @@ let employees = [
 ];
 
 // to get all employee data on button click
-
 let allEmpButton = document.querySelector("#all-emp-data");
 allEmpButton.addEventListener("click", () => {
   console.log("allEmpButton clicked");
-  displayData();
+  displayData(employees);
 });
 
-let displayData = () => {
+//TO GET MALE EMPLOYEE
+let maleEmpButton = document.querySelector("#male-emp-data");
+maleEmpButton.addEventListener("click", () => {
+  // console.log("maleEmpButton clicked");
+  //Logic to display the male employee
+  let maleEmployee = employees.filter((emp) => {
+    return emp.gender === "male";
+  });
+  console.log(maleEmployee);
+  displayData(maleEmployee);
+});
+
+//TO GET FEMALE EMPLOYEE
+let femaleEmpButton = document.querySelector("#female-emp-data");
+femaleEmpButton.addEventListener("click", () => {
+  // console.log("femaleEmpButton clicked");
+  //Logic to display the female employee
+  let femaleEmployee = employees.filter((emp) => {
+    return emp.gender === "female";
+  });
+  // console.log(femaleEmployee);
+  displayData(femaleEmployee);
+});
+
+//Display the data based on button clicked
+let displayData = (employees) => {
+  //logic to display the data
   let tBody = document.querySelector(".tbody");
+  //clear the table body
   let tableRow = "";
   for (let emp of employees) {
     // console.log(emp);
     tableRow += `
-    <tr>${emp.id}</tr>
-    <tr>${emp.first_name}</tr>
-    <tr>${emp.last_name}</tr>
-    <tr>${emp.email}</tr>
-    <tr>${emp.gender}</tr>
-    <tr>${emp.ip_address}</tr>
+    <tr>
+    <td>${emp.id}</td>
+    <td>${emp.first_name}</td>
+    <td>${emp.last_name}</td>
+    <td>${emp.email}</td>
+    <td>${emp.gender}</td>
+    <td>${emp.ip_address}</td>
+    </tr>
     `;
   }
-  tBody.innerHTML = tableRow;
+  tBody.innerHTML = tableRow; //Merging the data from tablerow to tablebody
 };
