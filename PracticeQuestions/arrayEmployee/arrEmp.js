@@ -134,3 +134,7 @@ let displayData = (employees) => {
   }
   tBody.innerHTML = tableRow; //Merging the data from tablerow to tablebody
 };
+
+
+//Sreach funnctionality 
+
