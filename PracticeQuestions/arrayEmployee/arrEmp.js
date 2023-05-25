@@ -135,6 +135,25 @@ let displayData = (employees) => {
   tBody.innerHTML = tableRow; //Merging the data from tablerow to tablebody
 };
 
+//Sreach funnctionality
 
-//Sreach funnctionality 
-
+let displayData = (employees) => {
+  //logic to display the data
+  let tBody = document.querySelector(".tbody");
+  //clear the table body
+  let tableRow = "";
+  for (let emp of employees) {
+    // console.log(emp);
+    tableRow += `
+    <tr>
+    <td>${emp.id}</td>
+    <td>${emp.first_name}</td>
+    <td>${emp.last_name}</td>
+    <td>${emp.email}</td>
+    <td>${emp.gender}</td>
+    <td>${emp.ip_address}</td>
+    </tr>
+    `;
+  }
+  tBody.innerHTML = tableRow; //Merging the data from tablerow to tablebody
+};
