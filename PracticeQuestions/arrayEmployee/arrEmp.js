@@ -136,4 +136,3 @@ let displayData = (employees) => {
 };
 
 //Sreach funnctionality
-
