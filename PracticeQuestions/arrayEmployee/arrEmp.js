@@ -109,7 +109,7 @@ femaleEmpButton.addEventListener("click", () => {
   let femaleEmployee = employees.filter((emp) => {
     return emp.gender === "female";
   });
-  // console.log(femaleEmployee);
+  console.log(femaleEmployee);
   displayData(femaleEmployee);
 });
 
@@ -135,4 +135,23 @@ let displayData = (employees) => {
   tBody.innerHTML = tableRow; //Merging the data from tablerow to tablebody
 };
 
-//Sreach funnctionality
+//Logic for Search functionality
+let search = document.querySelector("#search-box");
+search.addEventListener("keyup", function () {
+  let textEntered = search.value;
+  // console.log(textEntered);
+
+  let filteredEmployee = [];
+
+  if (textEntered != "") {
+    // logic for filtering employee
+    filteredEmployee = employees.filter((emp) => {
+      return (
+        emp.first_name.toLowerCase().includes(textEntered.toLowerCase()) ||
+        emp.last_name.toLowerCase().includes(textEntered.toLowerCase()) ||
+        emp.email.toLowerCase().includes(textEntered.toLowerCase())
+      );
+    });
+    displayData(filteredEmployee);
+  }
+});
