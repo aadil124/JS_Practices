@@ -141,6 +141,7 @@ search.addEventListener("keyup", function () {
   let textEntered = search.value;
   // console.log(textEntered);
 
+  // to check person is in table or not 
   let filteredEmployee = [];
 
   if (textEntered != "") {
