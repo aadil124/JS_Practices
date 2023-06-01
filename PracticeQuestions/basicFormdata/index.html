@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <!-- bootstrapFile -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 class="text-center mt-5">Employee Details (DOM-Manipulation)</h1>
+    <main class="d-flex flex-row mt-3">
+
+        <section class="container-fluid">
+
+            <form action="" autocomplete="off">
+                <div class="mb-3">
+                    <label class="form-label" for="first_Name">First Name</label>
+                    <input class="form-control" type="text" id="first_Name" name="first_Name"
+                        placeholder="Enter First Name" autocomplete="given-name">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="last_Name">Last Name</label>
+                    <input class="form-control" type="text" id="last_Name" name="last_Name"
+                        placeholder="Enter Last Name" autocomplete="family-name">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-control" type="email" id="email" name="email" placeholder="Enter Email ID"
+                        autocomplete="off">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="age">First Name</label>
+                    <input class="form-control" type="number" id="age" name="age" placeholder="Enter Your Age"
+                        autocomplete="off">
+                </div>
+                <button type="submit" class="btn btn-primary mt-3" id="submitData" value="submit">Submit</button>
+            </form>
+
+        </section>
+        <section class="table">
+            <table class="table table-striped table-bordered" id="tableData">
+                <thead>
+                    <tr>
+                        <td>First Name</td>
+                        <td>Last Name </td>
+                        <td>Email</td>
+                        <td>Age</td>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+    <script src="basicform.js"></script>
+</body>
+
+</html>
