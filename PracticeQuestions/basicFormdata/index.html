@@ -13,7 +13,7 @@
 
 <body>
     <h1 class="text-center mt-5">Employee Details (DOM-Manipulation)</h1>
-    <main class="d-flex flex-row mt-3">
+    <!-- <main class="d-flex flex-row mt-3">
 
         <section class="container-fluid">
 
@@ -57,7 +57,55 @@
             </table>
         </section>
 
-    </main>
+    </main> -->
+
+    <!--**********************Another Method for form Start *********************************-->
+
+    <table>
+        <tr>
+            <th>First Name</th>
+            <td><input type="text" id="fname"></td>
+        </tr>
+
+        <br>
+
+        <tr>
+            <th>Last Name</th>
+            <td><input type="text" id="lname"></td>
+        </tr>
+        <br>
+        <tr>
+            <th>Email</th>
+            <td><input type="email" id="email"></td>
+        </tr>
+        <br>
+        <tr>
+            <th>Age</th>
+            <td><input type="text" id="age"></td>
+        </tr>
+
+        <br>
+        .
+
+        <tr id="btn">
+            <td>
+                <input type="submit" id="btn" value="Submit" onclick="getData()">
+            </td>
+        </tr>
+    </table>
+
+
+    <table border="2" id="show">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+    </table>
+    <!--**********************Another Method for form End*************************************-->
     <script src="basicform.js"></script>
 </body>
 
