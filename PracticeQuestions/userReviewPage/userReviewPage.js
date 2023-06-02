@@ -188,3 +188,9 @@ prevBtn.addEventListener("click", () => {
   }
   showUser(currentItem);
 });
+
+randomBtn.addEventListener("click", () => {
+  currentItem = Math.floor(Math.random() * 20);
+  console.log(currentItem);
+  showUser(currentItem);
+});
