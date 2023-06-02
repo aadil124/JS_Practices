@@ -173,6 +173,7 @@ const showUser = (person) => {
   userDescription.innerHTML = item.text;
 };
 
+//Logic for next user when user clicks on button
 nextBtn.addEventListener("click", () => {
   currentItem++;
   if (currentItem > reviews.length - 1) {
@@ -181,16 +182,19 @@ nextBtn.addEventListener("click", () => {
   showUser(currentItem);
 });
 
+//Logic for previous user when user click on button
 prevBtn.addEventListener("click", () => {
   currentItem--;
   if (currentItem < 0) {
-    currentItem = reviews.length - 1;
+    currentItem = reviews.length - 1; //point current item to last index if user <0
   }
   showUser(currentItem);
 });
 
+//get the logic of random user
 randomBtn.addEventListener("click", () => {
-  currentItem = Math.floor(Math.random() * 20);
+  currentItem = Math.floor(Math.random() * reviews.length);
+  // currentItem = Math.trunc(Math.random() * reviews.length); //it can be use also
   console.log(currentItem);
   showUser(currentItem);
 });
