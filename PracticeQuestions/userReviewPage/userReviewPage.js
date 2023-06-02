@@ -140,3 +140,51 @@ const reviews = [
     id: "20",
   },
 ];
+
+//Select user target element
+const userImg = document.querySelector("#user_image");
+const userName = document.querySelector("#user_name");
+const userJob = document.querySelector("#user_job");
+const userDescription = document.querySelector("#user_description");
+
+//lets select button
+const prevBtn = document.querySelector(".prev_btn");
+const nextBtn = document.querySelector(".next_btn");
+const randomBtn = document.querySelector(".random_btn");
+
+//Try to load the data for first time
+let currentItem = 0;
+window.addEventListener("DOMContentLoaded", () => {
+  const item = reviews[currentItem]; //first data of the array of objects
+  userImg.src = item.img;
+  userName.innerHTML = item.name;
+  userJob.innerHTML = item.job;
+  userDescription.innerHTML = item.text;
+  // console.log(userName, userJob, userDescription);
+});
+
+//create a function showUserReview based on button
+//is to print and load other data info.
+const showUser = (person) => {
+  const item = reviews[person];
+  userImg.src = item.img;
+  userName.innerHTML = item.name;
+  userJob.innerHTML = item.job;
+  userDescription.innerHTML = item.text;
+};
+
+nextBtn.addEventListener("click", () => {
+  currentItem++;
+  if (currentItem > reviews.length - 1) {
+    currentItem = 0;
+  }
+  showUser(currentItem);
+});
+
+prevBtn.addEventListener("click", () => {
+  currentItem--;
+  if (currentItem < 0) {
+    currentItem = reviews.length - 1;
+  }
+  showUser(currentItem);
+});
