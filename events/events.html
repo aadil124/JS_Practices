@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JS</title>
+</head>
+
+<body>
+    <h1> SMS App</h1>
+    <textarea name="textMessage" id="textMessage" cols="30" rows="10" placeholder="Enter your text message here"
+        onkeyup="textMsg()"></textarea>
+    <h3>Remaining Characters : <span id="showchars">100</span></h3>
+
+    <hr>
+    <h1>Change Password</h1>
+
+    <input type="password" id="pass_box">
+    <input type="checkbox" id="check_box" onclick="changePassword()">Show</input>
+    <!-- <form action="">
+        <input type="password" placeholder="Password Here" id="pass-box">
+        <input type="checkbox" id="check" onchange="changepassword()">Show me
+    </form> -->
+    <hr>
+    <h2>Select target element</h2>
+    <select id="selecttag">
+        <option value="Mumbai">Mumbai</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Pune">Pune</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Hyderabad">Hyderabad</option>
+    </select>
+    <span id="span1"></span>
+
+
+    <script src="events.js"></script>
+
+</body>
+
+</html>
