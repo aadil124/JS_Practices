@@ -3,14 +3,14 @@ let countriesInfo = [
     name: "India",
     population: "1,394,974,747",
     region: "Asia",
-    flag: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpYye7Qu8yFpimb43xYuhqx6o_3zWErsDPiA&usqp=CAU",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Flag_of_the_Republic_of_India.svg/640px-Flag_of_the_Republic_of_India.svg.png",
     capital: "New Delhi",
   },
   {
     name: "Germany",
     population: "84,270,625",
     region: "Europe",
-    flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png?20070926182838",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/640px-Flag_of_Germany.svg.png",
     capital: "Berlin",
   },
   {
