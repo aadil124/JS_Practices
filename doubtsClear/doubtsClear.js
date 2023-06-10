@@ -148,3 +148,38 @@ countertwo.increment();
 
 console.log(counterone.count); //2
 console.log(countertwo.count); //1
+
+
+// var a = 10;
+
+// {
+//   let a = 20;
+//   //   var b = 20;
+//   console.log(a);
+// }
+
+// console.log(a);
+// console.log(b);
+var rate = 10;
+console.log(rate);
+function get() {
+  console.log(rate);
+  if (rate == undefined) {
+    let rate = 6;
+    return rate;
+  } else {
+    return rate;
+  }
+}
+console.log(get());
+
+// var rate = 10;
+// console.log(rate);
+
+// function fun() {
+//   var rate;
+//   console.log(rate);
+// }
+
+// console.log(rate);
+// fun();
