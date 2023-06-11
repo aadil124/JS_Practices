@@ -149,7 +149,6 @@ countertwo.increment();
 console.log(counterone.count); //2
 console.log(countertwo.count); //1
 
-
 // var a = 10;
 
 // {
@@ -160,18 +159,19 @@ console.log(countertwo.count); //1
 
 // console.log(a);
 // console.log(b);
-var rate = 10;
-console.log(rate);
+const rate = 10;
+// console.log(rate);
 function get() {
   console.log(rate);
   if (rate == undefined) {
-    let rate = 6;
+    var rate = 6;
     return rate;
   } else {
     return rate;
   }
 }
-console.log(get());
+get();
+// console.log(get());
 
 // var rate = 10;
 // console.log(rate);
