@@ -21,19 +21,34 @@ getPromiseBurger
 
 const roomClean = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve("Room is cleaning up");
+    let isRoomCleaned = true;
+    if (isRoomCleaned) {
+      resolve("Room is cleaning up");
+    } else {
+      reject("Room is not cleaned up");
+    }
   }, 5000);
 });
 
 const removeGarbage = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve("removing garbage");
+    let isGarbageRemove = true;
+    if (isGarbageRemove) {
+      resolve("removing garbage");
+    } else {
+      reject("garbage not removed yet");
+    }
   }, 3000);
 });
 
 const getPrize = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve("getting Prize for cleanup");
+    let isPrizeGot = true;
+    if (isPrizeGot) {
+      resolve("getting Prize for cleanup");
+    } else {
+      reject("Not getting Prizes for cleanup");
+    }
   }, 2000);
 });
 
