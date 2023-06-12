@@ -1,43 +1,31 @@
 const countResult = document.querySelector("#countDownResult");
 let count = 10;
 let timeout = 1000;
-const countDownFun = () => {
+
+setTimeout(() => {
+  countResult.innerHTML = count--;
   setTimeout(() => {
-    countResult.innerHTML = count;
-    count--;
+    countResult.innerHTML = count--;
     setTimeout(() => {
-      countResult.innerHTML = count;
-      count--;
+      countResult.innerHTML = count--;
       setTimeout(() => {
-        countResult.innerHTML = count;
-        count--;
+        countResult.innerHTML = count--;
         setTimeout(() => {
-          countResult.innerHTML = count;
-          count--;
+          countResult.innerHTML = count--;
           setTimeout(() => {
-            countResult.innerHTML = count;
-            count--;
+            countResult.innerHTML = count--;
             setTimeout(() => {
-              countResult.innerHTML = count;
-              count--;
+              countResult.innerHTML = count--;
               setTimeout(() => {
-                countResult.innerHTML = count;
-                count--;
+                countResult.innerHTML = count--;
                 setTimeout(() => {
-                  countResult.innerHTML = count;
-                  count--;
+                  countResult.innerHTML = count--;
                   setTimeout(() => {
-                    countResult.innerHTML = count;
-                    count--;
+                    countResult.innerHTML = count--;
                     setTimeout(() => {
-                      countResult.innerHTML = count;
-                      count--;
+                      countResult.innerHTML = count--;
                       setTimeout(() => {
-                        countResult.innerHTML = count;
-                        count--;
-                        setTimeout(() => {
-                          countResult.innerHTML = `Welcome to Callback Hell!!!`;
-                        }, timeout);
+                        countResult.innerHTML = `Welcome to Callback Hell!!!`;
                       }, timeout);
                     }, timeout);
                   }, timeout);
@@ -49,6 +37,4 @@ const countDownFun = () => {
       }, timeout);
     }, timeout);
   }, timeout);
-};
-
-countDownFun();
+}, timeout);
