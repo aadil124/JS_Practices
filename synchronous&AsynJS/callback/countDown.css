@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 40px;
+    color: blue;
+    background-color: rgba(64, 62, 67, 0.252);
+    padding: 20px;
+    text-align: center;
+}
+#countDownResult{
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: aqua;
+}
+.div{
+    background-color: rgb(94, 94, 3);
+}
