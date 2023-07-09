@@ -155,8 +155,8 @@ function getSum(num1, num2, ...arrays) {
   }
   return sum;
 }
-console.log(getSum(10, 20, 30)); //30 -> yaha 10 aur 20 ko skip ker dega Q ke wo last formal argument ko hi consider kerta hai
-console.log(getSum(10, 20, 30, 40, 50)); //120
+console.log(getSum(10, 80, 30)); //30 -> yaha 10 aur 20 ko skip ker dega Q ke wo last formal argument ko hi consider kerta hai
+console.log(getSum(10, 30, 30, 40, 50)); //120
 
 // IF YOU WANT TO SKIP FEW ELEMENTS THEN USE REST PARAMETERS ELEMENT, REST PARAMETERS CAN BE USED.
 
