@@ -66,7 +66,7 @@
 //   lname: "smith",
 //   age: 22,
 // };
-// console.log(getData(person));
+console.log(getData(person));
 
 /*************************** End Object Destructuring****************************************/
 
